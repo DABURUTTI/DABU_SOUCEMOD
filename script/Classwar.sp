@@ -230,7 +230,6 @@ public Action voteend()
     //int class = 1;
 
     //バブルソートで配列を得票順に並び変える
-    //少ないのでこれで問題なし
     for(int i=0; i < 10; i++)
     {
         for(int j=0; j < 10-i-1; j++)
