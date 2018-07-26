@@ -1,4 +1,4 @@
-//使用数機能などの宣言
+//各種インクルード
 #include <sourcemod>
 #include <tf2_stocks>
 #include <tf2_morestocks>
