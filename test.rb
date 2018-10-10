@@ -9,7 +9,7 @@ require 'uri'
 require 'rmagick'
 require 'mini_magick'
 
-bot = Discordrb::Commands::CommandBot.new token: 'MzkwNDIyNTgyMzIwNjkzMjQ5.DRJ49g.sr9_Ag7XBp2ea2cgLTgotTkyGC8', client_id: 390422582320693249, prefix: '!'
+bot = Discordrb::Commands::CommandBot.new token: '', client_id: 390422582320693249, prefix: '!'
 
 @tw = ""
 
