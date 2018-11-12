@@ -18,10 +18,10 @@ require 'twitter'
 @server
 
 @client = Twitter::REST::Client.new do |config|
-    config.consumer_key        = "R7EV1ClUsLD362gm8paWBLIGs"
-    config.consumer_secret     = "lFuyX0YJoaQdr3UhnaEVH8cxD3VeOmswG0rqAupC9IUQD4tUBs"
-    config.access_token        = "986913026174369798-PiWl6KOZFmXx7UXErQmdBZWqagLYg4d"
-    config.access_token_secret = "StXj6QptYsKdOgIRazyraqYxOIqS9OCbyduqAILo0UBGC"
+    config.consumer_key        = ""
+    config.consumer_secret     = ""
+    config.access_token        = ""
+    config.access_token_secret = ""
 end
 
 def wow_such_a_hot_server(server_name,number_of_trueplayers,max_players,ip,port,map_name,tag,var,os)
