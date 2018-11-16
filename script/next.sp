@@ -43,7 +43,7 @@ public Action:Loop(Handle:timer){
         CreateTimer(1.0,final);
 		return Plugin_Handled;
 	}
-    PrintToChatAll("マップの変更時間まで、あと%i分です！",timeleft);
+    PrintToChatAll("マップの変更時間まで、あと%i分です！\nChange map will be after %i minutes!",timeleft,timeleft);
 	timeleft = timeleft - 1;
 	CreateTimer(60.0,Loop2)
 }
@@ -54,39 +54,39 @@ public Action:Loop2(Handle:timer){
         CreateTimer(1.0,final);
 		return Plugin_Handled;
 	}
-    PrintToChatAll("マップの変更時間まで、あと%i分です！",timeleft);
+    PrintToChatAll("マップの変更時間まで、あと%i分です！\nChange map will be after %i minutes!",timeleft,timeleft);
 	timeleft = timeleft - 1;
 	CreateTimer(60.0,Loop);
 }
 
 public Action:final(Handle:timer)
 {
-    Show_text = "！警告！\nあと3分でマップを変更します！";
-    PrintToChatAll("マップの変更時間まで、あと3分です！");
+    Show_text = "！警告！\nあと3分でマップを変更します！\nChange map will be after 3 minutes!";
+    PrintToChatAll("マップの変更時間まで、あと3分です！\nChange map will be after 3 minutes!");
     CreateTimer(0.1,showtext);
     CreateTimer(60.0,fina2);
 }
 
 public Action:fina2(Handle:timer)
 {
-    Show_text = "！警告！\nあと2分でマップを変更します！";
-    PrintToChatAll("マップの変更時間まで、あと2分です！");
+    Show_text = "！警告！\nあと2分でマップを変更します！\nChange map will be after 2 minutes!";
+    PrintToChatAll("マップの変更時間まで、あと2分です！\nChange map will be after 2 minutes!");
     CreateTimer(0.1,showtext);
     CreateTimer(60.0,fina3);
 }
 
 public Action:fina3(Handle:timer){
 
-    Show_text = "！警告！\nあと1分でマップを変更します！";
-    PrintToChatAll("マップの変更時間まで、あと1分です！");
+    Show_text = "！警告！\nあと1分でマップを変更します！\nChange map will be after 1 minutes!";
+    PrintToChatAll("マップの変更時間まで、あと1分です！\nChange map will be after 1 minutes!");
     CreateTimer(0.1,showtext);
     CreateTimer(60.0,fina4);
 }
 
 public Action:fina4(Handle:timer)
 {
-    Show_text = "マップを変更します！";
-    PrintToChatAll("サーバーがマップ変更の作業を開始しています...");
+    Show_text = "マップを変更します！\nMap changing...";
+    PrintToChatAll("サーバーがマップ変更の作業を開始しています...\nMap changing...");
     CreateTimer(0.1,showtext);
     CreateTimer(60.0,fina5);
 }

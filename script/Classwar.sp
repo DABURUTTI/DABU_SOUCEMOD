@@ -151,7 +151,7 @@ public Action cw_class_select(int client, int args)
         votemenu.Display(i,10)
     }
     //タイムアウトを設定する
-    CreateTimer(10.0,vote_timeout);
+    CreateTimer(10.0,vote_timeoutvote_timeout);
 
     return Plugin_Handled;
 }
