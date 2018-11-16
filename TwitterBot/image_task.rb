@@ -220,7 +220,7 @@ class ImageTask
             self.gravity   = Magick::NorthWestGravity
         end
 
-        draw.annotate(img, 0, 0, 165, 502, "#{data[1]["player"]}/#{data[0]["maxplayer"]}") do
+        draw.annotate(img, 0, 0, 165, 502, "#{data[1]["player"]}/#{data[1]["maxplayer"]}") do
             self.font      = './NotoSansCJKjp-Medium.otf'
             self.fill      = '#000000'
             self.stroke    = 'transparent'
@@ -247,7 +247,7 @@ class ImageTask
             self.gravity   = Magick::NorthWestGravity
         end
 
-        draw.annotate(img, 0, 0, 165, 732, "#{data[2]["player"]}/#{data[0]["maxplayer"]}") do
+        draw.annotate(img, 0, 0, 165, 732, "#{data[2]["player"]}/#{data[2]["maxplayer"]}") do
             self.font      = './NotoSansCJKjp-Medium.otf'
             self.fill      = '#000000'
             self.stroke    = 'transparent'
@@ -276,7 +276,7 @@ class ImageTask
             self.gravity   = Magick::NorthWestGravity
         end
 
-        draw.annotate(img, 0, 0, 165, 962, "#{data[3]["player"]}/#{data[0]["maxplayer"]}") do
+        draw.annotate(img, 0, 0, 165, 962, "#{data[3]["player"]}/#{data[3]["maxplayer"]}") do
             self.font      = './NotoSansCJKjp-Medium.otf'
             self.fill      = '#000000'
             self.stroke    = 'transparent'
