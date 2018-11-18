@@ -166,9 +166,9 @@ if @hotserverdata.length == 1 then
     twstr = ""
     @imagetask.wow_such_a_hot_server(@hotserverdata,data)
     if @hotserverdata[0]["player"] == @hotserverdata[0]["maxplayer"] then
-        twstr = "#{@hotserverdata[0]["servername"].gsub(/#/, "")} が満員で激アツ！Join戦争だ！\n現在のTOP「#{data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[0][1]["name"]}」スコア:#{data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[0][1]["score"]}\nプレイ中のマップ「#{@hotserverdata[0]["mapname"]}」\n#{@hotserverdata[0]["ip"]}:#{@hotserverdata[0]["port"]}"
+        twstr = "#{@hotserverdata[0]["servername"].gsub(/#/, "")} が満員で激アツだっ！Join戦争だっ！\n現在のTOP「#{data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[0][1]["name"]}」スコア:#{data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[0][1]["score"]}\nプレイ中のマップ「#{@hotserverdata[0]["mapname"]}」\n#{@hotserverdata[0]["ip"]}:#{@hotserverdata[0]["port"]}"
     else
-        twstr = "#{@hotserverdata[0]["servername"].gsub(/#/, "")} がアツい！(#{@hotserverdata[0]["player"]}/#{@hotserverdata[0]["maxplayer"]})今すぐ参加だ！\n現在のTOP「#{data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[0][1]["name"]}」スコア:#{data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[0][1]["score"]}\nプレイ中のマップ「#{@hotserverdata[0]["mapname"]}」\n#{@hotserverdata[0]["ip"]}:#{@hotserverdata[0]["port"]}"
+        twstr = "#{@hotserverdata[0]["servername"].gsub(/#/, "")} がアツいっ！(#{@hotserverdata[0]["player"]}/#{@hotserverdata[0]["maxplayer"]})今すぐ参加だっ！\n現在のTOP「#{data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[0][1]["name"]}」スコア:#{data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[0][1]["score"]}\nプレイ中のマップ「#{@hotserverdata[0]["mapname"]}」\n#{@hotserverdata[0]["ip"]}:#{@hotserverdata[0]["port"]}"
     end
 
     images = []
@@ -179,12 +179,27 @@ elsif @hotserverdata.length > 1 then
     @imagetask.omg_a_lot_of_hot_server(@hotserverdata)
     images = []
     images << File.new('./tweet.png')
-    res = @client.update_with_media(twstr, images)
 
+    twstr2 = ""
+
+    for key, value in @hotserverdata do
+
+    name_out = value["servername"]
+    if  value["servername"].length > 28 then
+        name_out = value["servername"].slice(0, 29)
+    end
+
+    twstr2 = "#{twstr2}#{name_out}:#{value["player"]}/#{value["maxplayer"]}\n"
+    #gputs @hotserverdata[i]["servername"]
+
+    end
+
+    res = @client.update_with_media("複数の鯖が熱いぜっ！\n#{twstr2}", images)
     puts res
+
 end
 
-puts twstr
+
 #puts @hotserverdata.to_json
 
 #puts @hotserverdata.length
