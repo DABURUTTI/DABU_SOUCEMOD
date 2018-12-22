@@ -8,11 +8,11 @@ class ImageTask
           #puts @server.players
 
 
-      
+
           puts data.to_json
           #puts data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[][1]["name"]
-          
-      
+
+
           draw.annotate(img, 0, 0, 175, 365, data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[0][1]["name"]) do
               self.font      = './NotoSansCJKjp-Medium.otf'
               self.fill      = 'Black'
@@ -20,7 +20,7 @@ class ImageTask
               self.pointsize = 48
               self.gravity   = Magick::NorthWestGravity
           end
-      
+
           draw.annotate(img, 0, 0, 175, 428, "Score:#{data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[0][1]["score"]}   Time:#{data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[0][1]["time"]}min") do
               self.font      = './NotoSansCJKjp-Medium.otf'
               self.fill      = '#424242'
@@ -28,7 +28,7 @@ class ImageTask
               self.pointsize = 20
               self.gravity   = Magick::NorthWestGravity
           end
-      
+
           draw.annotate(img, 0, 0, 175, 475,  data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[1][1]["name"]) do
               self.font      = './NotoSansCJKjp-Medium.otf'
               self.fill      = 'Black'
@@ -36,7 +36,7 @@ class ImageTask
               self.pointsize = 48
               self.gravity   = Magick::NorthWestGravity
           end
-      
+
           draw.annotate(img, 0, 0, 175, 538, "Score:#{data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[1][1]["score"]}   Time:#{data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[1][1]["time"]}min") do
               self.font      = './NotoSansCJKjp-Medium.otf'
               self.fill      = '#424242'
@@ -51,7 +51,7 @@ class ImageTask
               self.pointsize = 48
               self.gravity   = Magick::NorthWestGravity
           end
-      
+
           draw.annotate(img, 0, 0, 175, 648, "Score:#{data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[2][1]["score"]}   Time:#{data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[2][1]["time"]}min") do
               self.font      = './NotoSansCJKjp-Medium.otf'
               self.fill      = '#424242'
@@ -66,7 +66,7 @@ class ImageTask
               self.pointsize = 48
               self.gravity   = Magick::NorthWestGravity
           end
-      
+
           draw.annotate(img, 0, 0, 175, 758, "Score:#{data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[3][1]["score"]}   Time:#{data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[3][1]["time"]}min") do
               self.font      = './NotoSansCJKjp-Medium.otf'
               self.fill      = '#424242'
@@ -81,7 +81,7 @@ class ImageTask
               self.pointsize = 48
               self.gravity   = Magick::NorthWestGravity
           end
-      
+
           draw.annotate(img, 0, 0, 175, 868, "Score:#{data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[4][1]["score"]}   Time:#{data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[4][1]["time"]}min") do
               self.font      = './NotoSansCJKjp-Medium.otf'
               self.fill      = '#424242'
@@ -96,7 +96,7 @@ class ImageTask
               self.pointsize = 48
               self.gravity   = Magick::NorthWestGravity
           end
-      
+
           draw.annotate(img, 0, 0, 175, 978, "Score:#{data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[5][1]["score"]}   Time:#{data["Player"].sort_by {| a,b | b["score"].to_i}.reverse[5][1]["time"]}min") do
               self.font      = './NotoSansCJKjp-Medium.otf'
               self.fill      = '#424242'
@@ -118,7 +118,7 @@ class ImageTask
               self.pointsize = 50
               self.gravity   = Magick::CenterGravity
           end
-      
+
           draw.annotate(img, 0, 0, 470, -15, "#{hotdata[0]["player"]}/#{hotdata[0]["maxplayer"]}") do
               self.font      = './NotoSansCJKjp-Bold.otf'
               self.fill      = '#000000'
@@ -126,7 +126,7 @@ class ImageTask
               self.pointsize = 50
               self.gravity   = Magick::CenterGravity
           end
-      
+
           draw.annotate(img, 0, 0, 470, 95, "#{hotdata[0]["ip"]}:#{hotdata[0]["port"]}") do
               self.font      = './NotoSansCJKjp-Bold.otf'
               self.fill      = '#000000'
@@ -146,7 +146,7 @@ class ImageTask
               self.pointsize = 30
               self.gravity   = Magick::CenterGravity
           end
-      
+
           draw.annotate(img, 0, 0, 470, 315, hotdata[0]["ver"]) do
               self.font      = './NotoSansCJKjp-Bold.otf'
               self.fill      = '#000000'

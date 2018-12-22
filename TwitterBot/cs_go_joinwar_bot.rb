@@ -3,7 +3,6 @@ require 'json'
 require 'twitter'
 require 'steam-condenser'
 
-
 require './image_task.rb'
 
 @imagetask = ImageTask.new
@@ -30,7 +29,7 @@ def Get_Server_Status(ip,port)
     @server = SourceServer.new(ip, port.to_i)
     @server.init
     serverdata = "#{@server}"
-    
+
     player =  @server.players
     mapname = serverdata.match(/map_name: "(.+)"/)
     servername = serverdata.match(/server_name: "(.+)"/)
@@ -44,7 +43,7 @@ def Get_Server_Status(ip,port)
     servernamemeta = servername[1]
 
     mapname = mapname[1]
-    
+
     if servernamemeta.length > 28 then
         servernamemeta = servernamemeta.slice(0, 29)
     end
