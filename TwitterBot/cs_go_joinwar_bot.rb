@@ -3,6 +3,7 @@ require 'json'
 require 'twitter'
 require 'steam-condenser'
 
+
 require './image_task.rb'
 
 @imagetask = ImageTask.new
