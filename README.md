@@ -1,2 +1,3 @@
 # DABU_SOURCEMOD
-Just a Sourcemod
+ようこそ、糞コードですが初心者向けにロジック一つ一つにcommentをつけています。
+良かったら見てね。
