@@ -72,7 +72,7 @@ public void RemoveWeapons(int client) {
 				iWepID = GetEntProp(iWep, Prop_Send, "m_iItemDefinitionIndex");
 				GetEntityClassname(iWep, classname, sizeof(classname));
 				if (isBANwepon(classname,iWepID)) {
-					PrintToChat(client, "\x07ff0000 [SM] %s is not allowed",classname);
+					PrintToChat(client, "\x07ff0000 [SM] %i:%s is not allowed",iWepID,classname);
 					TF2_RemoveWeaponSlot(client, x);
 				}
 			}
@@ -84,6 +84,7 @@ public void RemoveWeapons(int client) {
 public bool isBANwepon(char[] classname,int ID)
 {
 	if(ID == 355 || ID == 356  || ID == 224) return false;
+	if(ID == 880 || ID == 939 || ID == 474 || ID == 1) return true;
 
 	if(StrEqual(classname, "tf_weapon_rocketlauncher")
 			|| StrEqual(classname, "tf_weapon_scattergun")
