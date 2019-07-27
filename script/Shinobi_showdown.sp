@@ -46,6 +46,7 @@ public Action:OnTakeDamage(client, &attacker, &inflictor, &Float:damage, &damage
 			return Plugin_Continue;
 		}
 	}
+    return Plugin_Continue;
 }
 
 public Action Event_PlayerSpawn(Event event, const char[] name, bool dontBroadcast) {
@@ -84,7 +85,7 @@ public void RemoveWeapons(int client) {
 public bool isBANwepon(char[] classname,int ID)
 {
 	if(ID == 355 || ID == 356  || ID == 224) return false;
-	if(ID == 880 || ID == 939 || ID == 474 || ID == 1) return true;
+	if(ID == 880 || ID == 939 || ID == 474 || ID == 1 || ID == 237) return true;
 
 	if(StrEqual(classname, "tf_weapon_rocketlauncher")
 			|| StrEqual(classname, "tf_weapon_scattergun")
